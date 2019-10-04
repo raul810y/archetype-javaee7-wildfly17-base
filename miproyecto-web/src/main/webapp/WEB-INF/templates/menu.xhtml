@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:form id="frmMenu">
+		<p:menubar>
+			<f:facet name="options">
+				<!-- <em class="fa fa-user fa-lg"/>
+				<p:spacer height="10" width="10"/>
+				<p:outputLabel id="lblUNombresuarioMenu" value="#{authenticator1.usrLoggedCompletName}" rendered="#{authenticator1.loggedIn}"/>
+				<p:spacer height="10" width="10"/>
+				<p:commandButton id="btnCerrarSesion" value="#{msg.cerrar_sesion}" action="#{authenticator1.doLogout()}" update="messages" rendered="#{authenticator1.loggedIn}"/>
+				 -->
+				
+				<p:menuButton value="" icon="fa fa-user fa-lg">
+					<p:menuitem id="itmCerrarSesion" value="#{msg.cerrar_sesion}" action="#{authenticatorBean.doLogout()}" icon="fa fa-sign-out"  update="messages"/>
+					<p:separator />
+					<p:menuitem id="itmRol" value="ROL: Administrador"/> 
+<!-- 					<p:menuitem id="itmRol" value="#{msg.rol} #{authenticatorBean.usrLogueadoTO.grupos.get(0).strGrupoNombre}"  rendered="#{authenticator1.loggedIn}"/> -->
+					<p:separator />
+					<p:menuitem id="itmEtiquetaIdioma" value="#{msg.lenguaje}" icon="fa fa-language" disabled="true"/>
+					<p:menuitem id="itmIdiomaEs" value="#{msg.locale_es}" update="@all" action="#{localeBean.cambiarLenguage('es')}"/>
+					<p:menuitem id="itmIdiomaEn" value="#{msg.locale_en}" update="@all" action="#{localeBean.cambiarLenguage('en')}"/>
+					<p:separator />	
+				</p:menuButton>
+				
+			</f:facet>
+			<p:submenu label="Opción 1" >
+				<p:menuitem value="Sub-menú 1" immediate="true"/>
+			</p:submenu>
+			
+		</p:menubar>
+	</h:form>
+</ui:composition>

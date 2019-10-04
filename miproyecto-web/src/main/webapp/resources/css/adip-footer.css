@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+/* Esta hoja de estilos es utilizada por el footer de la aplicacion */
+ /* Style the footer */
+.footer {
+  background: #262629;
+  padding: 10px 16px;
+}

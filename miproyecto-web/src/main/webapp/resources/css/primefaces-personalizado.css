@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/*
+* A continuación, se sobrescriben algunos estilos de Primefaces
+*/
+
+/* Estilo para los renglones y columnas del p:panelGrid */
+.ui-grid-row .ui-grid-col-4 {
+	padding: 0.5em 0;
+}
+
+/* Estilo para que los p:outputlabel aparezcan en negritas, por default no son negritas */
+.ui-outputlabel {
+  font-weight:bold;
+}
+.ui-outputlabel2 {
+	font-weight:normal;
+	font-size: 16px;
+}
+/* Estilo sobresscrito para que el área de mensajes no aparezca con margen, por default trae margen de 10px */
+.ui-messages-info, .ui-messages-warn, .ui-messages-error, .ui-messages-fatal {
+	margin: 0px 0;
+}	
+
+/* Estilo sobresscrito para que el p:menubar no aparezca con espacio de relleno, por default trae .3m
+   También se sobrescribe el tamaño de la letra ya que por default trae 1m
+    */
+.ui-menu {
+	padding: 0;
+	font-size: 12px;
+/* 	position: inherit; */
+}
+
+/* Estilo sobreescrito para que el fondo de legend del componente p:fieldset sea transparente, por default es de color gris*/
+.ui-fieldset .ui-fieldset-legend {
+    background-color: transparent;
+    border-color:  transparent;
+    padding: 1;
+}
+
+/*Estilo sobreescrito para el relleno de las columnas, por default tienen el valor de 4px 10px*/
+.ui-panelgrid .ui-panelgrid-cell{
+	padding-bottom: 5;
+	padding-left: 1;
+	padding-right: 1;
+	padding-top: 1;
+}
+
+/* Estilo sobrescrito para la posición de los botones de primefaces, por defatult viene como absolute, lo cual provoca que se encime
+ a otro componente si este otro componente en el html no se mueve por ejemplo al realizar un scroll. Por ejemplo el header del aplicativo 
+.ui-button{
+	position: inherit;
+}
+
+.ui-menubutton{
+	position: inherit;
+}
+
+.ui-button-icon-only .ui-icon, .ui-button-text-icon-left .ui-icon, .ui-button-text-icon-right .ui-icon{
+	position: inherit;
+}
+*/
